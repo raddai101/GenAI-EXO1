@@ -13,6 +13,13 @@ def nombre_mystere():
         try:
             essais += 1
             nombre_utilisateur = int(input("Entrez un nombre entre 1 et 100 : "))
+            personnage = input("Voulez-vous créer de personnage ? (o/n)  ") or input("Voulez-vous continuer de jouer ? (o/n) ")
+            if personnage.lower() != "o":
+                print("passons au jeu.")
+                continue
+            else:
+                nom = input("Entrez le nom de votre personnage : ")
+                print(f"Bienvenue, {nom} ! amusez-vous bien.")
             
             
             if nombre_utilisateur < nombre_mystere:
@@ -27,11 +34,10 @@ def nombre_mystere():
                 print(f"Votre score est de {score}.")
                 choi_utilisateur = input("Voulez-vous continuer de jouer ? (o/n) ")
                 if choi_utilisateur.lower() != "o":
-                    print("Merci d'avoir joué ! À bientôt.")
+                    print(f"Merci d'avoir joué {nom} ! À bientôt.")
                     break
         except ValueError:
             print("Veuillez entrer un nombre valide.")   
         
 nombre_mystere()
 # if "___name__" == "__main__":
-#     nombre_mystere()
