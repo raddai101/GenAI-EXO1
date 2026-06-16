@@ -13,7 +13,7 @@ def nombre_mystere():
         try:
             essais += 1
             nombre_utilisateur = int(input("Entrez un nombre entre 1 et 100 : "))
-            print("choississez une option : 1. Continuer à jouer 2. Quitter le jeu 3. Afficher le score")
+            print("choississez une option : 1. Continuer à jouer 2. Quitter le jeu 3. Afficher le score 4.Modifier  intervalle")
             options = int(input("Entrez votre choix : "))
             
             if options == 1:
@@ -24,6 +24,12 @@ def nombre_mystere():
             elif options == 3:
                 print(f"Votre score est de {score}.")
                 continue
+            elif options == 4:
+                print("Veuillez entrer un intervalle de 1 a 100")
+                intervalle = int(input("Entrez votre choix : "))
+                if intervalle < 1 or intervalle > 100:
+                    print("Veuillez entrer un intervalle valide entre 1 et 100.")
+                    continue    
 
             if nombre_utilisateur < nombre_mystere:
                 print("Le nombre mystère est plus grand.")
