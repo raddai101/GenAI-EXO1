@@ -5,14 +5,19 @@ import random
 def nombre_mystere():
     
     print("Bienvenue dans le jeu du nombre mystère !")
-    
-    nombre_mystere = random.randint(1, 100)
+    n = 100
+    nombre_mystere = random.randint(1, n)
     essais = 0
     score = 100
     while True:
         try:
-            essais += 1
-            nombre_utilisateur = int(input("Entrez un nombre entre 1 et 100 : "))
+            options = int(input("Voulez-vous jouer ? (1 pour oui, 2 pour non) "))
+            if options == 1:
+                essais += 1
+                nombre_utilisateur = int(input("Entrez un nombre entre 1 et 100 : "))
+            else:
+                print("Au revoir !")
+                break
             personnage = input("Voulez-vous créer de personnage ? (o/n)  ") or input("Voulez-vous continuer de jouer ? (o/n) ")
             if personnage.lower() != "o":
                 print("passons au jeu.")
