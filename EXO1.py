@@ -8,6 +8,7 @@ def nombre_mystere():
     
     nombre_mystere = random.randint(1, 100)
     essais = 0
+    score = 100
     while True:
         try:
             essais += 1
@@ -22,6 +23,8 @@ def nombre_mystere():
                 print("Veuillez entrer un nombre valide entre 1 et 100.")
             elif nombre_utilisateur == nombre_mystere:
                 print(f"Bravo ! Vous avez trouvé le nombre mystère en {essais} essais.")
+                score -= essais * 10
+                print(f"Votre score est de {score}.")
         except ValueError:
             print("Veuillez entrer un nombre valide.")   
         
