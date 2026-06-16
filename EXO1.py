@@ -23,7 +23,7 @@ def nombre_mystere():
                 print("Veuillez entrer un nombre valide entre 1 et 100.")
             elif nombre_utilisateur == nombre_mystere:
                 print(f"Bravo ! Vous avez trouvé le nombre mystère en {essais} essais.")
-                score -= essais * 10
+                score -= essais 
                 print(f"Votre score est de {score}.")
         except ValueError:
             print("Veuillez entrer un nombre valide.")   
