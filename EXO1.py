@@ -25,6 +25,10 @@ def nombre_mystere():
                 print(f"Bravo ! Vous avez trouvé le nombre mystère en {essais} essais.")
                 score -= essais 
                 print(f"Votre score est de {score}.")
+                choi_utilisateur = input("Voulez-vous continuer de jouer ? (o/n) ")
+                if choi_utilisateur.lower() != "o":
+                    print("Merci d'avoir joué ! À bientôt.")
+                    break
         except ValueError:
             print("Veuillez entrer un nombre valide.")   
         
