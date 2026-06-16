@@ -15,6 +15,15 @@ def nombre_mystere():
             nombre_utilisateur = int(input("Entrez un nombre entre 1 et 100 : "))
             print("choississez une option : 1. Continuer à jouer 2. Quitter le jeu 3. Afficher le score")
             options = int(input("Entrez votre choix : "))
+            
+            if options == 1:
+                continue
+            elif options == 2:
+                print("Merci d'avoir joué ! À bientôt.")
+                break
+            elif options == 3:
+                print(f"Votre score est de {score}.")
+                continue
 
             if nombre_utilisateur < nombre_mystere:
                 print("Le nombre mystère est plus grand.")
