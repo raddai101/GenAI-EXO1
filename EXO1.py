@@ -1,7 +1,5 @@
 import random
 
-
-
 def nombre_mystere():
     
     print("Bienvenue dans le jeu du nombre mystère !")
